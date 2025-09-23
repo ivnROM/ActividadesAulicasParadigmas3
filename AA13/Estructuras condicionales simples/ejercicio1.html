@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promedio de Notas</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Promedio de Notas</h1>
+    
+    <script>
+        var nota1 = parseFloat(prompt("Ingrese primera nota:"));
+        var nota2 = parseFloat(prompt("Ingrese segunda nota:"));
+        var nota3 = parseFloat(prompt("Ingrese tercera nota:"));
+        
+        var promedio = (nota1 + nota2 + nota3) / 3;
+        
+        document.write("Nota 1: " + nota1 + "<br>");
+        document.write("Nota 2: " + nota2 + "<br>");
+        document.write("Nota 3: " + nota3 + "<br>");
+        document.write("Promedio: " + promedio + "<br><br>");
+        
+        if (promedio >= 7) {
+            document.write("Promocionado<br>");
+        }
+    </script>
+    
+</body>
+</html>
