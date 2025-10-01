@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regular o Reprobado</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Regular o Reprobado</h1>
+    
+    <script>
+        var nota1 = parseFloat(prompt("Ingrese primera nota:"));
+        var nota2 = parseFloat(prompt("Ingrese segunda nota:"));
+        var nota3 = parseFloat(prompt("Ingrese tercera nota:"));
+        
+        var promedio = (nota1 + nota2 + nota3) / 3;
+        
+        document.write("Nota 1: " + nota1 + "<br>");
+        document.write("Nota 2: " + nota2 + "<br>");
+        document.write("Nota 3: " + nota3 + "<br>");
+        document.write("Promedio: " + promedio + "<br><br>");
+        
+        if (promedio >= 4) {
+            document.write("Mensaje: Regular<br>");
+        } else {
+            document.write("Mensaje: Reprobado<br>");
+        }
+    </script>
+    
+</body>
+</html>

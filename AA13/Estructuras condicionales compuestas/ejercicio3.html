@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Número de Uno o Dos Dígitos</title>
+</head>
+<body>
+    <h1>Ejercicio 3: Número de Uno o Dos Dígitos</h1>
+    
+    <script>
+        var numero = parseInt(prompt("Ingrese un número positivo de uno o dos dígitos (1..99):"));
+        
+        document.write("Número ingresado: " + numero + "<br><br>");
+        
+        if (numero >= 1 && numero <= 9) {
+            document.write("Mensaje: El número tiene un dígito<br>");
+        } else if (numero >= 10 && numero <= 99) {
+            document.write("Mensaje: El número tiene dos dígitos<br>");
+        } else {
+            document.write("Mensaje: Error - El número debe estar entre 1 y 99<br>");
+        }
+    </script>
+    
+</body>
+</html>

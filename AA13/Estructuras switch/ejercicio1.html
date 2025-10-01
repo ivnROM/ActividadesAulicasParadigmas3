@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traducir Palabras al Inglés</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Traducir Palabras al Inglés</h1>
+    <script>
+    var palabra = prompt("Ingrese una palabra (casa, mesa, perro, gato):");
+    document.write("Palabra ingresada: " + palabra + "<br><br>");
+    switch(palabra) {
+      case "casa":
+        document.write("Traducción en inglés: house<br>");
+        break;
+      case "mesa":
+        document.write("Traducción en inglés: table<br>");
+        break;
+      case "perro":
+        document.write("Traducción en inglés: dog<br>");
+        break;
+      case "gato":
+        document.write("Traducción en inglés: cat<br>");
+        break;
+      default:
+        document.write("Palabra no encontrada en el diccionario<br>");
+        break;
+    }
+    </script>
+  </body>
+</html>

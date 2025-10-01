@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparar Dos Números</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Comparar Dos Números</h1>
+    
+    <script>
+        var num1 = parseFloat(prompt("Ingrese el primer número:"));
+        var num2 = parseFloat(prompt("Ingrese el segundo número:"));
+        
+        document.write("Primer número: " + num1 + "<br>");
+        document.write("Segundo número: " + num2 + "<br><br>");
+        
+        if (num1 > num2) {
+            var suma = num1 + num2;
+            var diferencia = num1 - num2;
+            document.write("El primer número es mayor al segundo<br>");
+            document.write("Suma: " + suma + "<br>");
+            document.write("Diferencia: " + diferencia + "<br>");
+        } else {
+            var producto = num1 * num2;
+            var division = num1 / num2;
+            document.write("El primer número NO es mayor al segundo<br>");
+            document.write("Producto: " + producto + "<br>");
+            document.write("División: " + division + "<br>");
+        }
+    </script>
+    
+</body>
+</html>

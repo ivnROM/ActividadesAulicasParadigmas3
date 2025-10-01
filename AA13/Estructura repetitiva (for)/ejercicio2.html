@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma de Últimos 5 Valores</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Suma de Últimos 5 Valores</h1>
+    
+    <script>
+        var suma = 0;
+        
+        for (var i = 1; i <= 10; i++) {
+            var numero = parseFloat(prompt("Ingrese el número " + i + ":"));
+            document.write("Número " + i + ": " + numero + "<br>");
+            
+            if (i > 5) {
+                suma = suma + numero;
+            }
+        }
+        
+        document.write("<br><h3>Resultado:</h3>");
+        document.write("Suma de los últimos 5 valores: " + suma + "<br>");
+    </script>
+    
+</body>
+</html>

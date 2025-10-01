@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tres Valores Iguales</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Tres Valores Iguales</h1>
+    
+    <script>
+        var valor1 = parseFloat(prompt("Ingrese el primer valor:"));
+        var valor2 = parseFloat(prompt("Ingrese el segundo valor:"));
+        var valor3 = parseFloat(prompt("Ingrese el tercer valor:"));
+        
+        document.write("Valores ingresados: " + valor1 + ", " + valor2 + ", " + valor3 + "<br><br>");
+        
+        if (valor1 == valor2) {
+            if (valor2 == valor3) {
+                var suma = valor1 + valor2;
+                var resultado = suma * valor3;
+                document.write("Los tres valores son iguales<br>");
+                document.write("Suma del primero con el segundo: " + suma + "<br>");
+                document.write("Resultado multiplicado por el tercero: " + resultado + "<br>");
+            }
+        }
+    </script>
+    
+</body>
+</html>

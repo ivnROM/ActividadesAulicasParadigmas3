@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Función que Ordena de Menor a Mayor</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Función que Ordena de Menor a Mayor</h1>
+    
+    <script>
+        function ordenarMenorMayor(num1, num2, num3) {
+            document.write("Números enviados: " + num1 + ", " + num2 + ", " + num3 + "<br>");
+            document.write("Números ordenados de menor a mayor: ");
+            
+            if (num1 <= num2 && num1 <= num3) {
+                document.write(num1 + " ");
+                if (num2 <= num3) {
+                    document.write(num2 + " " + num3);
+                } else {
+                    document.write(num3 + " " + num2);
+                }
+            } else if (num2 <= num1 && num2 <= num3) {
+                document.write(num2 + " ");
+                if (num1 <= num3) {
+                    document.write(num1 + " " + num3);
+                } else {
+                    document.write(num3 + " " + num1);
+                }
+            } else {
+                document.write(num3 + " ");
+                if (num1 <= num2) {
+                    document.write(num1 + " " + num2);
+                } else {
+                    document.write(num2 + " " + num1);
+                }
+            }
+            
+            document.write("<br><br>");
+        }
+        
+        var valor1 = parseInt(prompt("Ingrese el primer número:"));
+        var valor2 = parseInt(prompt("Ingrese el segundo número:"));
+        var valor3 = parseInt(prompt("Ingrese el tercer número:"));
+        
+        ordenarMenorMayor(valor1, valor2, valor3);
+    </script>
+    
+</body>
+</html>

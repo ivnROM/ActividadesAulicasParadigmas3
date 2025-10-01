@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sueldo del Operario</title>
+</head>
+<body>
+    <h1>Ejercicio 5: Sueldo del Operario</h1>
+    
+    <script>
+        var sueldo = parseFloat(prompt("Ingrese el sueldo del operario:"));
+        var antiguedad = parseInt(prompt("Ingrese los años de antigüedad:"));
+        
+        document.write("Sueldo: $" + sueldo + "<br>");
+        document.write("Antigüedad: " + antiguedad + " años<br><br>");
+        
+        if (sueldo < 500) {
+            if (antiguedad >= 10) {
+                var aumento = sueldo * 0.20;
+                var nuevoSueldo = sueldo + aumento;
+                document.write("Se otorga un aumento del 20%<br>");
+                document.write("Aumento: $" + aumento + "<br>");
+                document.write("Nuevo sueldo: $" + nuevoSueldo + "<br>");
+            } else {
+                var aumento = sueldo * 0.05;
+                var nuevoSueldo = sueldo + aumento;
+                document.write("Se otorga un aumento del 5%<br>");
+                document.write("Aumento: $" + aumento + "<br>");
+                document.write("Nuevo sueldo: $" + nuevoSueldo + "<br>");
+            }
+        } else {
+            document.write("El sueldo es mayor o igual a $500<br>");
+            document.write("No hay cambios en el sueldo<br>");
+            document.write("Sueldo: $" + sueldo + "<br>");
+        }
+    </script>
+    
+</body>
+</html>

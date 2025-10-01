@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Multiplicar Variable</title>
+</head>
+<body>
+    <h1>Ejercicio 4: Tabla de Multiplicar Variable</h1>
+    
+    <script>
+        var valor = parseInt(prompt("Ingrese un valor del 1 al 10:"));
+        
+        document.write("<h3>Tabla de multiplicar del " + valor + " (primeros 12 términos):</h3>");
+        document.write("Ejemplo: El ingreso 3 deberá aparecer en pantalla los valores 3, 6, 9, hasta el 36.<br><br>");
+        
+        for (var i = 1; i <= 12; i++) {
+            var resultado = valor * i;
+            document.write(valor + " x " + i + " = " + resultado + "<br>");
+        }
+    </script>
+    
+</body>
+</html>

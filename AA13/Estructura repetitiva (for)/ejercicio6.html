@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coordenadas en Cuadrantes</title>
+</head>
+<body>
+    <h1>Ejercicio 6: Coordenadas en Cuadrantes</h1>
+    
+    <script>
+        var cantidadPuntos = parseInt(prompt("¿Cuántos puntos desea ingresar?"));
+        
+        var cuadrante1 = 0;
+        var cuadrante2 = 0;
+        var cuadrante3 = 0;
+        var cuadrante4 = 0;
+        
+        for (var i = 1; i <= cantidadPuntos; i++) {
+            document.write("<h3>Punto " + i + ":</h3>");
+            
+            var x = parseFloat(prompt("Punto " + i + " - Ingrese coordenada x:"));
+            var y = parseFloat(prompt("Punto " + i + " - Ingrese coordenada y:"));
+            
+            document.write("Coordenada: (" + x + ", " + y + ")<br>");
+            
+            if (x > 0 && y > 0) {
+                document.write("Se encuentra en el primer cuadrante<br>");
+                cuadrante1 = cuadrante1 + 1;
+            } else if (x < 0 && y > 0) {
+                document.write("Se encuentra en el segundo cuadrante<br>");
+                cuadrante2 = cuadrante2 + 1;
+            } else if (x < 0 && y < 0) {
+                document.write("Se encuentra en el tercer cuadrante<br>");
+                cuadrante3 = cuadrante3 + 1;
+            } else if (x > 0 && y < 0) {
+                document.write("Se encuentra en el cuarto cuadrante<br>");
+                cuadrante4 = cuadrante4 + 1;
+            }
+            
+            document.write("<br>");
+        }
+        
+        document.write("<h3>Resumen:</h3>");
+        document.write("Puntos en el primer cuadrante: " + cuadrante1 + "<br>");
+        document.write("Puntos en el segundo cuadrante: " + cuadrante2 + "<br>");
+        document.write("Puntos en el tercer cuadrante: " + cuadrante3 + "<br>");
+        document.write("Puntos en el cuarto cuadrante: " + cuadrante4 + "<br>");
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medidas de Triángulos</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Medidas de Triángulos</h1>
+    
+    <script>
+        var contadorMayor12 = 0;
+        
+        for (var i = 1; i <= 3; i++) {
+            document.write("<h3>Triángulo " + i + ":</h3>");
+            
+            var base = parseFloat(prompt("Triángulo " + i + " - Ingrese la base:"));
+            var altura = parseFloat(prompt("Triángulo " + i + " - Ingrese la altura:"));
+            
+            var superficie = (base * altura) / 2;
+            
+            document.write("Base: " + base + "<br>");
+            document.write("Altura: " + altura + "<br>");
+            document.write("Superficie: " + superficie + "<br>");
+            
+            if (superficie > 12) {
+                contadorMayor12 = contadorMayor12 + 1;
+            }
+            
+            document.write("<br>");
+        }
+        
+        document.write("<h3>Resultado:</h3>");
+        document.write("Cantidad de triángulos cuya superficie es mayor a 12: " + contadorMayor12 + "<br>");
+    </script>
+    
+</body>
+</html>

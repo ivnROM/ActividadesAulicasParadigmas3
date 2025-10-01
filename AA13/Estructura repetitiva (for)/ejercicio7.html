@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Análisis de 10 Valores</title>
+</head>
+<body>
+    <h1>Ejercicio 7: Análisis de 10 Valores</h1>
+    
+    <script>
+        var cantidadNegativos = 0;
+        var cantidadPositivos = 0;
+        var cantidadMultiplos15 = 0;
+        var sumaAcumulada = 0;
+        
+        for (var i = 1; i <= 10; i++) {
+            var valor = parseInt(prompt("Ingrese el valor " + i + ":"));
+            document.write("Valor " + i + ": " + valor + "<br>");
+            
+            if (valor < 0) {
+                cantidadNegativos = cantidadNegativos + 1;
+            }
+            
+            if (valor > 0) {
+                cantidadPositivos = cantidadPositivos + 1;
+            }
+            
+            if (valor % 15 == 0) {
+                cantidadMultiplos15 = cantidadMultiplos15 + 1;
+            }
+            
+            sumaAcumulada = sumaAcumulada + valor;
+        }
+        
+        document.write("<br><h3>Resultados:</h3>");
+        document.write("a) Cantidad de valores negativos: " + cantidadNegativos + "<br>");
+        document.write("b) Cantidad de valores positivos: " + cantidadPositivos + "<br>");
+        document.write("c) Cantidad de múltiplos de 15: " + cantidadMultiplos15 + "<br>");
+        document.write("d) Valor acumulado de todos los números: " + sumaAcumulada + "<br>");
+    </script>
+    
+</body>
+</html>
