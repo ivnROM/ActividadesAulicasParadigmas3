@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Función que Retorna el Mayor</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Función que Retorna el Mayor</h1>
+    
+    <script>
+        function retornarMayor(num1, num2, num3) {
+            var mayor = num1;
+            
+            if (num2 > mayor) {
+                mayor = num2;
+            }
+            
+            if (num3 > mayor) {
+                mayor = num3;
+            }
+            
+            return mayor;
+        }
+        
+        var valor1 = parseInt(prompt("Ingrese el primer número:"));
+        var valor2 = parseInt(prompt("Ingrese el segundo número:"));
+        var valor3 = parseInt(prompt("Ingrese el tercer número:"));
+        
+        var resultado = retornarMayor(valor1, valor2, valor3);
+        
+        document.write("Números ingresados: " + valor1 + ", " + valor2 + ", " + valor3 + "<br>");
+        document.write("El mayor es: " + resultado + "<br>");
+    </script>
+    
+</body>
+</html>

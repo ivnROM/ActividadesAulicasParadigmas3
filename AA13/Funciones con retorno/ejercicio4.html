@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Función que Retorna Promedio</title>
+</head>
+<body>
+    <h1>Ejercicio 4: Función que Retorna Promedio</h1>
+    
+    <script>
+        function calcularPromedio(num1, num2, num3) {
+            var promedio = (num1 + num2 + num3) / 3;
+            return promedio;
+        }
+        
+        var valor1 = parseFloat(prompt("Ingrese el primer número:"));
+        var valor2 = parseFloat(prompt("Ingrese el segundo número:"));
+        var valor3 = parseFloat(prompt("Ingrese el tercer número:"));
+        
+        var resultado = calcularPromedio(valor1, valor2, valor3);
+        
+        document.write("Números ingresados: " + valor1 + ", " + valor2 + ", " + valor3 + "<br>");
+        document.write("Promedio: " + resultado + "<br>");
+    </script>
+    
+</body>
+</html>

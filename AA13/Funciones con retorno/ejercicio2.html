@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Función que Retorna Perímetro</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Función que Retorna Perímetro</h1>
+    
+    <script>
+        function calcularPerimetro(lado) {
+            var perimetro = lado * 4;
+            return perimetro;
+        }
+        
+        var ladoCuadrado = parseFloat(prompt("Ingrese el valor del lado del cuadrado:"));
+        
+        var resultado = calcularPerimetro(ladoCuadrado);
+        
+        document.write("Lado del cuadrado: " + ladoCuadrado + "<br>");
+        document.write("Perímetro del cuadrado: " + resultado + "<br>");
+    </script>
+    
+</body>
+</html>
