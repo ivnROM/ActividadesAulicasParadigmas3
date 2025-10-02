@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones de Cadena</title>
+</head>
+<body>
+    <h1>Ejercicio 6: Funciones de Cadena</h1>
+    
+    <script>
+        var texto = prompt("Ingrese un texto o cadena:");
+        
+        document.write("<h3>Texto ingresado:</h3>");
+        document.write(texto + "<br><br>");
+        
+        document.write("<h3>a) Primera mitad de los caracteres:</h3>");
+        var mitad = Math.floor(texto.length / 2);
+        var primeraMitad = texto.substring(0, mitad);
+        document.write(primeraMitad + "<br><br>");
+        
+        document.write("<h3>b) Último carácter:</h3>");
+        var ultimoCaracter = texto.charAt(texto.length - 1);
+        document.write(ultimoCaracter + "<br><br>");
+        
+        document.write("<h3>c) Texto en forma inversa:</h3>");
+        var textoInverso = "";
+        for (var i = texto.length - 1; i >= 0; i--) {
+            textoInverso = textoInverso + texto.charAt(i);
+        }
+        document.write(textoInverso + "<br><br>");
+        
+        document.write("<h3>d) Cada carácter separado con guión:</h3>");
+        var conGuiones = "";
+        for (var i = 0; i < texto.length; i++) {
+            conGuiones = conGuiones + texto.charAt(i);
+            if (i < texto.length - 1) {
+                conGuiones = conGuiones + "-";
+            }
+        }
+        document.write(conGuiones + "<br><br>");
+        
+        document.write("<h3>e) Cantidad de vocales:</h3>");
+        var cantidadVocales = 0;
+        var textoMinus = texto.toLowerCase();
+        for (var i = 0; i < textoMinus.length; i++) {
+            var caracter = textoMinus.charAt(i);
+            if (caracter == "a" || caracter == "e" || caracter == "i" || caracter == "o" || caracter == "u") {
+                cantidadVocales = cantidadVocales + 1;
+            }
+        }
+        document.write(cantidadVocales + " vocales<br>");
+    </script>
+    
+</body>
+</html>

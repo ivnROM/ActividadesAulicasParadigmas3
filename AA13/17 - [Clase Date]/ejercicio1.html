@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cuatrimestre del Año</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Cuatrimestre del Año</h1>
+
+    <script>
+    var fechaActual = new Date();
+    var mes = fechaActual.getMonth() + 1;
+
+    document.write("Fecha actual: " + fechaActual.toLocaleDateString() + "<br>");
+    document.write("Mes: " + mes + "<br><br>");
+
+    if (mes >= 1 && mes <= 4) {
+      document.write("Nos encontramos en el primer cuatrimestre del año<br>");
+    } else if (mes >= 5 && mes <= 8) {
+      document.write("Nos encontramos en el segundo cuatrimestre del año<br>");
+    } else {
+      document.write("Nos encontramos en el tercer cuatrimestre del año<br>");
+    }
+    </script>
+
+  </body>
+</html>

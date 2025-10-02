@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buscar Clave en Texto</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3: Buscar Clave en Texto</h1>
+
+    <script>
+    var texto = prompt("Ingrese una frase o texto:");
+    var clave = prompt("Ingrese la clave a buscar:");
+
+    var posicion = texto.indexOf(clave);
+
+    document.write("Texto ingresado: " + texto + "<br>");
+    document.write("Clave a buscar: " + clave + "<br><br>");
+
+    if (posicion != -1) {
+      document.write("La clave fue encontrada en la posición: " + posicion + "<br>");
+    } else {
+      document.write("La clave no se encuentra en el texto<br>");
+    }
+    </script>
+
+  </body>
+</html>

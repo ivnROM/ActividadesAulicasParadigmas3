@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salir con "Fin" sin Mayúsculas/Minúsculas</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Salir con "Fin" sin Mayúsculas/Minúsculas</h1>
+    
+    <script>
+        var palabra = "";
+        var contador = 0;
+        
+        do {
+            palabra = prompt("Ingrese una palabra (escriba 'Fin' para terminar):");
+            var palabraMinus = palabra.toLowerCase();
+            
+            if (palabraMinus != "fin") {
+                contador = contador + 1;
+                document.write(contador + ". " + palabra + "<br>");
+            }
+        } while (palabraMinus != "fin");
+        
+        document.write("<br><h3>Resultado:</h3>");
+        document.write("Se ingresaron " + contador + " palabras<br>");
+        document.write("Nota: La aplicación termina sin importar si se escribe 'Fin', 'FIN', 'fin', etc.<br>");
+    </script>
+    
+</body>
+</html>

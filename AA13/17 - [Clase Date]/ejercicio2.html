@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formato de Fecha</title>
+  </head>
+  <body>
+    <h1>Ejercicio 2: Formato de Fecha</h1>
+
+    <script>
+    function obtenerNombreDia(numeroDia) {
+      var dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+      return dias[numeroDia];
+    }
+
+    function obtenerNombreMes(numeroMes) {
+      var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      return meses[numeroMes];
+    }
+
+    var fecha = new Date();
+
+    var diaSemana = fecha.getDay();
+    var diaMes = fecha.getDate();
+    var mes = fecha.getMonth();
+    var anio = fecha.getFullYear();
+
+    var nombreDia = obtenerNombreDia(diaSemana);
+    var nombreMes = obtenerNombreMes(mes);
+
+    var fechaFormateada = "Hoy es " + nombreDia + " " + diaMes + " de " + nombreMes + " de " + anio;
+
+    document.write("<h3>Formato requerido:</h3>");
+    document.write(fechaFormateada + "<br><br>");
+
+    document.write("<h3>Información adicional:</h3>");
+    document.write("Día de la semana (getDay()): " + diaSemana + " (" + nombreDia + ")<br>");
+    document.write("Nota: getDay() devuelve 0 para Domingo, 1 para Lunes, etc.<br>");
+    </script>
+
+  </body>
+</html>

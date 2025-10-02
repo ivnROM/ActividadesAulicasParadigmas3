@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vector de 8 Elementos</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Vector de 8 Elementos</h1>
+
+    <script>
+    var vector = [];
+    var sumaTotal = 0;
+    var sumaMayores36 = 0;
+    var cantidadMayores50 = 0;
+
+    for (var i = 0; i < 8; i++) {
+      var valor = parseFloat(prompt("Ingrese el elemento " + (i + 1) + " del vector:"));
+      vector[i] = valor;
+
+      sumaTotal = sumaTotal + valor;
+
+      if (valor > 36) {
+        sumaMayores36 = sumaMayores36 + valor;
+      }
+
+      if (valor > 50) {
+        cantidadMayores50 = cantidadMayores50 + 1;
+      }
+    }
+
+    document.write("<h3>Vector ingresado:</h3>");
+    document.write("[");
+    for (var i = 0; i < vector.length; i++) {
+      document.write(vector[i]);
+      if (i < vector.length - 1) {
+        document.write(", ");
+      }
+    }
+    document.write("]<br><br>");
+
+    document.write("<h3>Resultados:</h3>");
+    document.write("El valor acumulado de todos los elementos del vector: " + sumaTotal + "<br>");
+    document.write("El valor acumulado de los elementos del vector que sean mayores a 36: " + sumaMayores36 + "<br>");
+    document.write("Cantidad de valores mayores a 50: " + cantidadMayores50 + "<br>");
+    </script>
+
+  </body>
+</html>

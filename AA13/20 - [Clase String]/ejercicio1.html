@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingresar Nombres hasta "Fin"</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Ingresar Nombres hasta "Fin"</h1>
+
+    <script>
+    var nombre = "";
+    var contador = 0;
+
+    do {
+      nombre = prompt("Ingrese un nombre (escriba 'Fin' para terminar):");
+
+      if (nombre != "Fin") {
+        contador = contador + 1;
+        document.write(contador + ". " + nombre + "<br>");
+      }
+    } while (nombre != "Fin");
+
+    document.write("<br><h3>Resultado:</h3>");
+    document.write("Se ingresaron " + contador + " nombres<br>");
+    </script>
+
+  </body>
+</html>

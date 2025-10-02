@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Suma de Dos Vectores</title>
+  </head>
+  <body>
+    <h1>Ejercicio 2: Suma de Dos Vectores</h1>
+
+    <script>
+    var tamano = parseInt(prompt("Ingrese el tamaño de los vectores:"));
+
+    var vector1 = [];
+    var vector2 = [];
+    var vectorSuma = [];
+
+    document.write("<h3>Carga del primer vector:</h3>");
+    for (var i = 0; i < tamano; i++) {
+      var valor = parseFloat(prompt("Vector 1 - Ingrese el elemento " + (i + 1) + ":"));
+      vector1[i] = valor;
+      document.write("Elemento " + (i + 1) + ": " + valor + "<br>");
+    }
+
+    document.write("<br><h3>Carga del segundo vector:</h3>");
+    for (var i = 0; i < tamano; i++) {
+      var valor = parseFloat(prompt("Vector 2 - Ingrese el elemento " + (i + 1) + ":"));
+      vector2[i] = valor;
+      document.write("Elemento " + (i + 1) + ": " + valor + "<br>");
+    }
+
+    document.write("<br><h3>Suma de los vectores componente a componente:</h3>");
+    for (var i = 0; i < tamano; i++) {
+      vectorSuma[i] = vector1[i] + vector2[i];
+    }
+
+    document.write("Vector 1: [");
+    for (var i = 0; i < vector1.length; i++) {
+      document.write(vector1[i]);
+      if (i < vector1.length - 1) document.write(", ");
+    }
+    document.write("]<br>");
+
+    document.write("Vector 2: [");
+    for (var i = 0; i < vector2.length; i++) {
+      document.write(vector2[i]);
+      if (i < vector2.length - 1) document.write(", ");
+    }
+    document.write("]<br>");
+
+    document.write("Vector Suma: [");
+    for (var i = 0; i < vectorSuma.length; i++) {
+      document.write(vectorSuma[i]);
+      if (i < vectorSuma.length - 1) document.write(", ");
+    }
+    document.write("]<br>");
+    </script>
+
+  </body>
+</html>

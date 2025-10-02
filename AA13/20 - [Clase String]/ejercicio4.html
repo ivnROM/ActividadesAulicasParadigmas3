@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verificar Palíndromo</title>
+  </head>
+  <body>
+    <h1>Ejercicio 4: Verificar Palíndromo</h1>
+
+    <script>
+    var palabra = prompt("Ingrese una palabra o texto:");
+
+    var palabraInversa = "";
+
+    for (var i = palabra.length - 1; i >= 0; i--) {
+      palabraInversa = palabraInversa + palabra.charAt(i);
+    }
+
+    document.write("Palabra original: " + palabra + "<br>");
+    document.write("Palabra invertida: " + palabraInversa + "<br><br>");
+
+    if (palabra == palabraInversa) {
+      document.write("Es un palíndromo (se lee igual de adelante hacia atrás)<br>");
+    } else {
+      document.write("No es un palíndromo<br>");
+    }
+    </script>
+
+  </body>
+</html>

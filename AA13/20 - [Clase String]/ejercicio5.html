@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validar Email con @</title>
+</head>
+<body>
+    <h1>Ejercicio 5: Validar Email con @</h1>
+    
+    <script>
+        function verificarEmail(email) {
+            var posicion = email.indexOf("@");
+            
+            if (posicion != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        var email = prompt("Ingrese una dirección de email:");
+        
+        var esValido = verificarEmail(email);
+        
+        document.write("Email ingresado: " + email + "<br><br>");
+        
+        if (esValido) {
+            document.write("El email es válido (contiene el carácter @)<br>");
+        } else {
+            document.write("El email NO es válido (no contiene el carácter @)<br>");
+        }
+    </script>
+    
+</body>
+</html>

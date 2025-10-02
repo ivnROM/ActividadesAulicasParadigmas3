@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Oración en Líneas</title>
+</head>
+<body>
+    <h1>Ejercicio 7: Mostrar Oración en Líneas</h1>
+    
+    <script>
+        var oracion = prompt("Ingrese una oración:");
+        
+        document.write("<h3>Oración ingresada:</h3>");
+        document.write(oracion + "<br><br>");
+        
+        document.write("<h3>Cada palabra en una línea distinta:</h3>");
+        
+        var palabraActual = "";
+        
+        for (var i = 0; i < oracion.length; i++) {
+            var caracter = oracion.charAt(i);
+            
+            if (caracter == " ") {
+                if (palabraActual != "") {
+                    document.write(palabraActual + "<br>");
+                    palabraActual = "";
+                }
+            } else {
+                palabraActual = palabraActual + caracter;
+            }
+        }
+        
+        if (palabraActual != "") {
+            document.write(palabraActual + "<br>");
+        }
+    </script>
+    
+</body>
+</html>
