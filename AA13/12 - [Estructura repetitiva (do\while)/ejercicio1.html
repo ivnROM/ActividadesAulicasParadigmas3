@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acumular Valores hasta 9999</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Acumular Valores hasta 9999</h1>
+    
+    <script>
+        var suma = 0;
+        var valor = 0;
+        var contador = 0;
+        
+        do {
+            valor = parseInt(prompt("Ingrese un valor (9999 para finalizar):"));
+            
+            if (valor != 9999) {
+                suma = suma + valor;
+                contador = contador + 1;
+                document.write("Valor " + contador + ": " + valor + "<br>");
+            }
+        } while (valor != 9999);
+        
+        document.write("<br><h3>Resultados:</h3>");
+        document.write("Valor acumulado: " + suma + "<br>");
+        document.write("Cantidad de valores ingresados: " + contador + "<br>");
+        
+        if (suma == 0) {
+            document.write("El valor acumulado es igual a cero<br>");
+        } else if (suma > 0) {
+            document.write("El valor acumulado es mayor a cero<br>");
+        } else {
+            document.write("El valor acumulado es menor a cero<br>");
+        }
+    </script>
+    
+</body>
+</html>

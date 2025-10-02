@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valores Pares e Impares</title>
+</head>
+<body>
+    <h1>Ejercicio 7: Valores Pares e Impares</h1>
+    
+    <script>
+        var cantidadPares = 0;
+        var cantidadImpares = 0;
+        
+        for (var i = 1; i <= 5; i++) {
+            var numero = parseInt(prompt("Ingrese el número " + i + ":"));
+            document.write("Número " + i + ": " + numero);
+            
+            if (numero % 2 == 0) {
+                document.write(" (Par)<br>");
+                cantidadPares = cantidadPares + 1;
+            } else {
+                document.write(" (Impar)<br>");
+                cantidadImpares = cantidadImpares + 1;
+            }
+        }
+        
+        document.write("<br><h3>Resultados:</h3>");
+        document.write("Cantidad de valores pares: " + cantidadPares + "<br>");
+        document.write("Cantidad de valores impares: " + cantidadImpares + "<br>");
+    </script>
+    
+</body>
+</html>

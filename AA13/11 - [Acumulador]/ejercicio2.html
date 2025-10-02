@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Altura Promedio de Personas</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Altura Promedio de Personas</h1>
+    
+    <script>
+        var sumaAlturas = 0;
+        
+        for (var i = 1; i <= 5; i++) {
+            var altura = parseFloat(prompt("Ingrese la altura de la persona " + i + " (en metros):"));
+            document.write("Persona " + i + ": " + altura + " metros<br>");
+            sumaAlturas = sumaAlturas + altura;
+        }
+        
+        var alturaPromedio = sumaAlturas / 5;
+        
+        document.write("<br><h3>Resultado:</h3>");
+        document.write("Altura promedio de las 5 personas: " + alturaPromedio + " metros<br>");
+    </script>
+    
+</body>
+</html>

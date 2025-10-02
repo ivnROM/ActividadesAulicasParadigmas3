@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparar Listas de Valores</title>
+</head>
+<body>
+    <h1>Ejercicio 6: Comparar Listas de Valores</h1>
+    
+    <script>
+        var sumaLista1 = 0;
+        var sumaLista2 = 0;
+        
+        document.write("<h3>Lista 1:</h3>");
+        for (var i = 1; i <= 3; i++) {
+            var valor = parseFloat(prompt("Lista 1 - Ingrese el valor " + i + ":"));
+            document.write("Valor " + i + ": " + valor + "<br>");
+            sumaLista1 = sumaLista1 + valor;
+        }
+        
+        document.write("<br><h3>Lista 2:</h3>");
+        for (var i = 1; i <= 3; i++) {
+            var valor = parseFloat(prompt("Lista 2 - Ingrese el valor " + i + ":"));
+            document.write("Valor " + i + ": " + valor + "<br>");
+            sumaLista2 = sumaLista2 + valor;
+        }
+        
+        document.write("<br><h3>Resultados:</h3>");
+        document.write("Suma de Lista 1: " + sumaLista1 + "<br>");
+        document.write("Suma de Lista 2: " + sumaLista2 + "<br><br>");
+        
+        if (sumaLista1 > sumaLista2) {
+            document.write("'Lista 1 mayor'<br>");
+        } else if (sumaLista2 > sumaLista1) {
+            document.write("'Lista 2 mayor'<br>");
+        } else {
+            document.write("'Listas iguales'<br>");
+        }
+    </script>
+    
+</body>
+</html>

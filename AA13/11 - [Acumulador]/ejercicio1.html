@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notas de Alumnos</title>
+</head>
+<body>
+    <h1>Ejercicio 1: Notas de Alumnos</h1>
+    
+    <script>
+        var mayoresIguales7 = 0;
+        var menores7 = 0;
+        
+        for (var i = 1; i <= 10; i++) {
+            var nota = parseFloat(prompt("Ingrese la nota del alumno " + i + ":"));
+            document.write("Alumno " + i + ": " + nota + "<br>");
+            
+            if (nota >= 7) {
+                mayoresIguales7 = mayoresIguales7 + 1;
+            } else {
+                menores7 = menores7 + 1;
+            }
+        }
+        
+        document.write("<br><h3>Resultados:</h3>");
+        document.write("Cantidad de notas mayores o iguales a 7: " + mayoresIguales7 + "<br>");
+        document.write("Cantidad de notas menores a 7: " + menores7 + "<br>");
+    </script>
+    
+</body>
+</html>

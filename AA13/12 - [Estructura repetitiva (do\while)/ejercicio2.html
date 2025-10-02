@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cuentas Corrientes del Banco</title>
+</head>
+<body>
+    <h1>Ejercicio 2: Cuentas Corrientes del Banco</h1>
+    
+    <script>
+        var numeroCuenta = 0;
+        var sumaAcreedores = 0;
+        var contadorCuentas = 0;
+        
+        do {
+            numeroCuenta = parseInt(prompt("Ingrese el número de cuenta (0 para finalizar):"));
+            
+            if (numeroCuenta != 0) {
+                var nombre = prompt("Ingrese el nombre del cliente:");
+                var saldo = parseFloat(prompt("Ingrese el saldo actual:"));
+                
+                contadorCuentas = contadorCuentas + 1;
+                
+                document.write("<h3>Cuenta " + contadorCuentas + ":</h3>");
+                document.write("Número de cuenta: " + numeroCuenta + "<br>");
+                document.write("Nombre del cliente: " + nombre + "<br>");
+                document.write("Saldo: $" + saldo + "<br>");
+                
+                if (saldo > 0) {
+                    document.write("Estado de la cuenta: 'Acreedor'<br>");
+                    sumaAcreedores = sumaAcreedores + saldo;
+                } else if (saldo < 0) {
+                    document.write("Estado de la cuenta: 'Deudor'<br>");
+                } else {
+                    document.write("Estado de la cuenta: 'Nulo'<br>");
+                }
+                
+                document.write("<br>");
+            }
+        } while (numeroCuenta != 0);
+        
+        document.write("<h3>Resultado Final:</h3>");
+        document.write("La suma total de los saldos acreedores es: $" + sumaAcreedores + "<br>");
+    </script>
+    
+</body>
+</html>

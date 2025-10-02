@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Censo Provincial</title>
+</head>
+<body>
+    <h1>Ejercicio 3: Censo Provincial</h1>
+    
+    <script>
+        var totalPersonas = 0;
+        var totalVarones = 0;
+        var totalMujeres = 0;
+        var varonesEntre16y65 = 0;
+        var documento = 0;
+        
+        do {
+            documento = parseInt(prompt("Ingrese el número de documento (0 para finalizar):"));
+            
+            if (documento != 0) {
+                var edad = parseInt(prompt("Ingrese la edad:"));
+                var sexo = prompt("Ingrese el sexo (femenino o masculino):").toLowerCase();
+                
+                totalPersonas = totalPersonas + 1;
+                
+                document.write("<h3>Persona " + totalPersonas + ":</h3>");
+                document.write("Documento: " + documento + "<br>");
+                document.write("Edad: " + edad + " años<br>");
+                document.write("Sexo: " + sexo + "<br><br>");
+                
+                if (sexo == "masculino") {
+                    totalVarones = totalVarones + 1;
+                    
+                    if (edad >= 16 && edad <= 65) {
+                        varonesEntre16y65 = varonesEntre16y65 + 1;
+                    }
+                } else if (sexo == "femenino") {
+                    totalMujeres = totalMujeres + 1;
+                }
+            }
+        } while (documento != 0);
+        
+        document.write("<h3>Resultados del Censo:</h3>");
+        document.write("a) Cantidad total de personas censadas: " + totalPersonas + "<br>");
+        document.write("b) Cantidad de varones: " + totalVarones + "<br>");
+        document.write("c) Cantidad de mujeres: " + totalMujeres + "<br>");
+        document.write("d) Cantidad de varones cuya edad varía entre 16 y 65 años: " + varonesEntre16y65 + "<br>");
+    </script>
+    
+</body>
+</html>
