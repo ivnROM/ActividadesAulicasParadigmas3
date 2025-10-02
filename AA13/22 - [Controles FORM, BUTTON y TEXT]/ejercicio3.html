@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 3: Nombre completo</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3: Nombre completo</h1>
+
+    <form>
+      <label>Nombre: </label>
+      <input type="text" id="nombre"><br><br>
+      <label>Apellido: </label>
+      <input type="text" id="apellido"><br><br>
+      <button type="button" onclick="concatenar()">Concatenar</button><br><br>
+      <label>Resultado: </label>
+      <input type="text" id="resultado">
+    </form>
+
+    <script>
+      function concatenar() {
+        var nom = document.getElementById("nombre").value;
+        var ape = document.getElementById("apellido").value;
+        document.getElementById("resultado").value = nom + " " + ape;
+      }
+    </script>
+  </body>
+</html>

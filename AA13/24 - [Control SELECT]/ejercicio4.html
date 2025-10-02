@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 4: Examen de Sistemas Operativos</title>
+  </head>
+  <body>
+    <h1>Ejercicio 4: Examen de Sistemas Operativos</h1>
+
+    <form>
+      <p>1. ¿Qué son los hilos (threads) en un sistema operativo?
+        <select id="p1">
+          <option value="">--Seleccione--</option>
+          <option value="Procesos livianos que comparten recursos del mismo proceso">Procesos livianos que comparten recursos del mismo proceso</option>
+          <option value="Programas completos e independientes">Programas completos e independientes</option>
+          <option value="Archivos ejecutables almacenados en disco">Archivos ejecutables almacenados en disco</option>
+        </select>
+      </p>
+
+      <p>2. ¿Qué es el kernel en un sistema operativo?
+        <select id="p2">
+          <option value="">--Seleccione--</option>
+          <option value="La parte central del sistema operativo que gestiona hardware y recursos">La parte central del sistema operativo que gestiona hardware y recursos</option>
+          <option value="Un programa de usuario con interfaz gráfica">Un programa de usuario con interfaz gráfica</option>
+          <option value="El sistema de archivos donde se guardan los programas">El sistema de archivos donde se guardan los programas</option>
+        </select>
+      </p>
+
+      <p>3. ¿Qué entendemos por espacio de direcciones de un proceso?
+        <select id="p3">
+          <option value="">--Seleccione--</option>
+          <option value="El rango de direcciones de memoria que puede utilizar el proceso">El rango de direcciones de memoria que puede utilizar el proceso</option>
+          <option value="La ubicación en disco donde se guarda el programa">La ubicación en disco donde se guarda el programa</option>
+          <option value="La tabla de procesos que maneja el sistema operativo">La tabla de procesos que maneja el sistema operativo</option>
+        </select>
+      </p>
+
+      <p>4. ¿Cuál de los siguientes NO es un tipo de memoria en un sistema operativo?
+        <select id="p4">
+          <option value="">--Seleccione--</option>
+          <option value="Memoria cache">Memoria cache</option>
+          <option value="Memoria principal (RAM)">Memoria principal (RAM)</option>
+          <option value="Memoria gravitacional">Memoria gravitacional</option>
+        </select>
+      </p>
+
+      <button type="button" onclick="corregir()">Corregir</button>
+      <br><br>
+      <label>Correctas: </label><input type="text" id="ok">
+      <label>Incorrectas: </label><input type="text" id="fail">
+    </form>
+
+    <script>
+      function corregir() {
+        var correctas = 0;
+        var incorrectas = 0;
+
+        if (document.getElementById("p1").value == "Procesos livianos que comparten recursos del mismo proceso") correctas++; else incorrectas++;
+        if (document.getElementById("p2").value == "La parte central del sistema operativo que gestiona hardware y recursos") correctas++; else incorrectas++;
+        if (document.getElementById("p3").value == "El rango de direcciones de memoria que puede utilizar el proceso") correctas++; else incorrectas++;
+        if (document.getElementById("p4").value == "Memoria gravitacional") correctas++; else incorrectas++;
+
+        document.getElementById("ok").value = correctas;
+        document.getElementById("fail").value = incorrectas;
+      }
+    </script>
+  </body>
+</html>

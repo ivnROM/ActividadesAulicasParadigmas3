@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio: Control Password</title>
+  </head>
+  <body>
+    <h1>Ejercicio: Control Password</h1>
+
+    <form>
+      <label>Ingrese la contraseña: </label>
+      <input type="password" id="contraseña1"><br><br>
+
+      <label>Repita la contraseña: </label>
+      <input type="password" id="contraseña2"><br><br>
+
+      <button type="button" onclick="verificar()">Verificar</button>
+    </form>
+
+    <script>
+      function verificar() {
+        var c1 = document.getElementById("contraseña1").value;
+        var c2 = document.getElementById("contraseña2").value;
+
+        if (c1 == c2) {
+          alert("Las contraseñas coinciden.");
+        } else {
+          alert("Las contraseñas NO coinciden.");
+        }
+      }
+    </script>
+  </body>
+</html>
+

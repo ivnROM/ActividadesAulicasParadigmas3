@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 3: Pedido Pizza</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3: Pedido de Pizzas</h1>
+
+    <form>
+      <label>Seleccione la pizza: </label>
+      <select id="tipoPizza">
+        <option value="4">Queso - $4</option>
+        <option value="6">Jamón y Queso - $6</option>
+        <option value="10">Especial - $10</option>
+      </select>
+      <br><br>
+
+      <label>Cantidad: </label>
+      <input type="text" id="cantidad">
+      <br><br>
+
+      <button type="button" onclick="calcularTotal()">Calcular</button>
+      <br><br>
+
+      <label>Importe Total: </label>
+      <input type="text" id="importe">
+    </form>
+
+    <script>
+      function calcularTotal() {
+        var precio = parseInt(document.getElementById("tipoPizza").value);
+        var cant = parseInt(document.getElementById("cantidad").value);
+        var total = precio * cant;
+        document.getElementById("importe").value = total;
+      }
+    </script>
+  </body>
+</html>
+

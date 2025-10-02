@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 1: Cubo de un número</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Cubo de un número</h1>
+
+    <form>
+      <label>Ingrese un número: </label>
+      <input type="text" id="numero">
+      <button type="button" onclick="elevarCubo()">Calcular</button>
+    </form>
+
+    <script>
+      function elevarCubo() {
+        var n = document.getElementById("numero").value;
+        var cubo = n * n * n;
+        alert("El cubo es: " + cubo);
+      }
+    </script>
+  </body>
+</html>

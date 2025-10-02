@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 2: Mayor de dos números</title>
+  </head>
+  <body>
+    <h1>Ejercicio 2: Mayor de dos números</h1>
+
+    <form>
+      <label>Número 1: </label>
+      <input type="text" id="n1"><br><br>
+      <label>Número 2: </label>
+      <input type="text" id="n2"><br><br>
+      <button type="button" onclick="mostrarMayor()">Mostrar mayor</button>
+    </form>
+
+    <script>
+      function mostrarMayor() {
+        var a = parseFloat(document.getElementById("n1").value);
+        var b = parseFloat(document.getElementById("n2").value);
+
+        if (a > b) {
+          alert("El mayor es: " + a);
+        } else if (b > a) {
+          alert("El mayor es: " + b);
+        } else {
+          alert("Son iguales: " + a);
+        }
+      }
+    </script>
+  </body>
+</html>

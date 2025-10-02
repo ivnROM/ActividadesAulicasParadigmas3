@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio 1: Pizzas</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1: Selección de Pizza</h1>
+
+    <form>
+      <label>Seleccione una pizza: </label>
+      <select id="pizza" onchange="mostrarPrecio()">
+        <option value="">-- Seleccione --</option>
+        <option value="500">Jamón y Queso</option>
+        <option value="600">Muzzarella</option>
+        <option value="700">Morrones</option>
+      </select>
+      <br><br>
+      <label>Precio: </label>
+      <input type="text" id="precio">
+    </form>
+
+    <script>
+      function mostrarPrecio() {
+        var precio = document.getElementById("pizza").value;
+        document.getElementById("precio").value = precio;
+      }
+    </script>
+  </body>
+</html>
+
