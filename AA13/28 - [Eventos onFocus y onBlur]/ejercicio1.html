@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eventos onFocus y onBlur</title>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    
+    <form>
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre" size="30"><br><br>
+        
+        <label>Clave:</label><br>
+        <input type="password" id="clave" size="30" onblur="validarClave()"><br><br>
+    </form>
+    
+    <script>
+        function validarClave() {
+            var clave = document.getElementById("clave").value;
+            var longitud = clave.length;
+            
+            if (longitud < 7) {
+                alert("La clave debe tener al menos 7 caracteres");
+            } else if (longitud > 20) {
+                alert("La clave no puede tener más de 20 caracteres");
+            }
+        }
+    </script>
+    
+</body>
+</html>

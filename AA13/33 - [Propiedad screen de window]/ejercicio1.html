@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Propiedad screen</title>
+  </head>
+  <body>
+    <h1>Abrir Ventana a Pantalla Completa</h1>
+    <p>Al presionar el botón se abre una ventana que ocupa todo el ancho y la mitad de la altura del monitor.</p>
+
+    <button onclick="abrirVentanaCompleta()">Abrir Ventana</button>
+
+    <p id="info"></p>
+
+    <script>
+    var anchoMonitor = screen.width;
+    var alturaMonitor = screen.height;
+
+    document.getElementById("info").innerHTML = 
+      "Resolución del monitor:<br>" +
+        "Ancho: " + anchoMonitor + " píxeles<br>" +
+        "Altura: " + alturaMonitor + " píxeles";
+
+    function abrirVentanaCompleta() {
+      var ancho = screen.width;
+      var altura = screen.height / 2;
+
+      window.open("", "ventanaGrande", "width=" + ancho + ",height=" + altura);
+    }
+    </script>
+
+  </body>
+</html>

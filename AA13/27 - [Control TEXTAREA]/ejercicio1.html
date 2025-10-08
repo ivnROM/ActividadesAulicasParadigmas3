@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Control TEXTAREA - Página de Visitas</title>
+  </head>
+  <body>
+    <h1>Página de Visitas</h1>
+
+    <form>
+      <label>Nombre:</label><br>
+      <input type="text" id="nombre" size="30"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" id="email" size="30"><br><br>
+
+      <label>Comentarios:</label><br>
+      <textarea id="comentarios" rows="5" cols="40"></textarea><br><br>
+
+      <button type="button" onclick="mostrarDatos()">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+    function mostrarDatos() {
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var comentarios = document.getElementById("comentarios").value;
+
+      var mensaje = "Datos ingresados:\n\n";
+      mensaje = mensaje + "Nombre: " + nombre + "\n";
+      mensaje = mensaje + "Email: " + email + "\n";
+      mensaje = mensaje + "Comentarios: " + comentarios;
+
+      alert(mensaje);
+
+      document.getElementById("resultado").innerHTML = 
+        "<h3>Datos recibidos:</h3>" +
+          "<p><strong>Nombre:</strong> " + nombre + "</p>" +
+          "<p><strong>Email:</strong> " + email + "</p>" +
+          "<p><strong>Comentarios:</strong><br>" + comentarios + "</p>";
+    }
+    </script>
+
+  </body>
+</html>

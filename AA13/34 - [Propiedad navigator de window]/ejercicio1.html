@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Propiedad navigator</title>
+  </head>
+  <body onload="verificarCookies()">
+    <h1>Verificación de Cookies</h1>
+    <p>Esta página verifica si el navegador tiene las cookies activadas.</p>
+
+    <div id="resultado"></div>
+
+    <h3>Información del Navegador:</h3>
+    <div id="infoNavegador"></div>
+
+    <script>
+    function verificarCookies() {
+      if (navigator.cookieEnabled) {
+        alert("Tu navegador tiene las cookies ACTIVADAS");
+        document.getElementById("resultado").innerHTML = 
+          "<p style='color: green'>✓ Cookies Activadas</p>";
+      } else {
+        alert("Tu navegador tiene las cookies DESACTIVADAS");
+        document.getElementById("resultado").innerHTML = 
+          "<p style='color: red'>✗ Cookies Desactivadas</p>";
+      }
+
+      document.getElementById("infoNavegador").innerHTML = 
+        "<strong>Nombre del navegador:</strong> " + navigator.appName + "<br>" +
+          "<strong>Versión:</strong> " + navigator.appVersion + "<br>" +
+          "<strong>User Agent:</strong> " + navigator.userAgent + "<br>" +
+          "<strong>Plataforma:</strong> " + navigator.platform + "<br>" +
+          "<strong>Idioma:</strong> " + navigator.language;
+    }
+    </script>
+
+  </body>
+</html>

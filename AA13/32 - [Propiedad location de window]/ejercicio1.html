@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Propiedad location</title>
+  </head>
+  <body>
+    <h1>Redirigir a Servicio de Email</h1>
+    <p>Al presionar el botón, será redirigido a Outlook, Gmail o Yahoo</p>
+
+    <button onclick="redirigirEmail()">Ir a Email Aleatorio</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+    function redirigirEmail() {
+      var num = Math.random() * 3;
+      num = parseInt(num);
+
+      if (num == 0) {
+        document.getElementById("mensaje").innerHTML = "Redirigiendo a Outlook...";
+        setTimeout(function() {
+          window.location = 'https://outlook.live.com';
+        }, 1000);
+      } else if (num == 1) {
+        document.getElementById("mensaje").innerHTML = "Redirigiendo a Gmail...";
+        setTimeout(function() {
+          window.location = 'https://mail.google.com';
+        }, 1000);
+      } else if (num == 2) {
+        document.getElementById("mensaje").innerHTML = "Redirigiendo a Yahoo...";
+        setTimeout(function() {
+          window.location = 'https://mail.yahoo.com';
+        }, 1000);
+      }
+    }
+    </script>
+
+  </body>
+</html>

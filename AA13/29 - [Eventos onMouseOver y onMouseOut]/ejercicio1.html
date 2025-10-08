@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventos onMouseOver y onMouseOut</title>
+    <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px;
+    }
+
+    td {
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Servicios de Email</h1>
+    <p>Pasa el mouse sobre las casillas para ver el cambio de color</p>
+
+    <table>
+      <tr>
+        <td onmouseover="this.style.backgroundColor='#ff6b6b'" 
+          onmouseout="this.style.backgroundColor='white'">
+          <a href="https://mail.google.com" target="_blank">Gmail</a>
+        </td>
+
+        <td onmouseover="this.style.backgroundColor='#4ecdc4'" 
+          onmouseout="this.style.backgroundColor='white'">
+          <a href="https://outlook.live.com" target="_blank">Hotmail</a>
+        </td>
+
+        <td onmouseover="this.style.backgroundColor='#95e1d3'" 
+          onmouseout="this.style.backgroundColor='white'">
+          <a href="https://mail.yahoo.com" target="_blank">Yahoo</a>
+        </td>
+      </tr>
+    </table>
+
+    <p>Haga clic en cualquier casilla para acceder al servicio de email correspondiente</p>
+
+  </body>
+</html>
