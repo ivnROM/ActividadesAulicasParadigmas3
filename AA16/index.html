@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA TE TI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="mostrarSuperpuesto()">
+  <div id="overlay">
+    <div id="popup">
+      <h1>Ta Te Ti</h1>
+      <h2>Reglas del juego</h2>
+      <ul>
+        <li>2 jugadores.</li>
+        <li>Cada jugador tiene tres fichas iguales "X" "O".</li>
+        <li>Los jugadores se turnan para colocar su ficha en una casilla vacía del tablero.</li>
+        <li>Cuando los dos jugadores han colocado sus tres fichas en el tablero, podrán cambiarlas de lugar moviéndolas a casillas adyacentes vacías.</li>
+      </ul>
+      <h2>Objetivo</h2>
+      <p>Conseguir colocar tres fichas iguales en línea vertical, horizontal o diagonal.</p>
+      <button id="aceptar">Continuar</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>TA TE TI</h1>
+    <div id="info">Turno del jugador X</div>
+    <div id="matrix"></div>
+    <button id="reiniciar">Nuevo Juego</button>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
